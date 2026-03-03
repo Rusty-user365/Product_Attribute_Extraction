@@ -20,6 +20,7 @@ The model was evaluated based on its ability to correctly identify and categoriz
 | **Attribute-level Precision** | 100% |
 | **Attribute-level Recall** | 100% |
 | **Overall F1 Score** | 1.00 |
+| **Loss NER** | 4.98 |
 
 ### Common Failure Cases
 
@@ -54,6 +55,23 @@ Send a **POST** request to `http://localhost:8000/extract`:
 }
 
 ```
+
+### Expected JSON Output:
+```json
+{
+  "status": "success",
+  "input": "Floor length chiffon bridesmaid dress with pleated bodice and V neckline",
+  "attributes": {
+    "Length": "Floor length",
+    "Fabric": "chiffon",
+    "Category": "bridesmaid dress",
+    "Embellishment": "pleated bodice",
+    "Neckline": "V neckline"
+  }
+}
+
+```
+
 
 ---
 
