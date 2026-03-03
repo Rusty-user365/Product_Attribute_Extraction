@@ -46,7 +46,7 @@ pip install spacy fastapi uvicorn pandas
 
 ### 3. Test the Endpoint
 
-Send a **POST** request to `http://localhost:8000/extract`:
+Send a **POST** request to `http://127.0.0.1:8000/docs#/`:
 **Body:**
 
 ```json
@@ -75,9 +75,8 @@ Send a **POST** request to `http://localhost:8000/extract`:
 
 ---
 
-### Final Check
+### Project Structure
 
-Before you submit, ensure your folder structure looks like this:
 
 ```text
 project-folder/
