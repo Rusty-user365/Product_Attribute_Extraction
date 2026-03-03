@@ -40,7 +40,7 @@ pip install spacy fastapi uvicorn pandas
 ### 2. Start the API
 
 ```bash
-python main.py
+ uvicorn app:main --reload --host 0.0.0.0 --port 8000     
 
 ```
 
@@ -91,3 +91,23 @@ project-folder/
 └── README.md            # Your documentation
 
 ```
+
+
+
+---
+
+##  Future Enhancements
+
+To make the pipeline more efficient and scalable, the following improvements are planned:
+
+- **Vector Database + Caching:** Product descriptions will be embedded and stored in a vector database (e.g., Chroma/FAISS).  
+  - Exact matches will be served instantly from cache.  
+  - Near‑duplicate descriptions will reuse previously extracted attributes, reducing redundant computation.  
+
+- **LLM Refinement:** Outputs from the spaCy NER model will be passed to a reasoning LLM (e.g., Qwen) for validation and enrichment.  
+  - The LLM can correct errors, fill missing attributes, and ensure consistency with the defined schema.  
+  - This hybrid approach balances speed (spaCy) with accuracy (LLM).  
+
+- **Resource Optimization:** By combining caching, similarity search, and selective LLM calls, the system minimizes compute costs while maintaining high‑quality attribute extraction.
+
+---
