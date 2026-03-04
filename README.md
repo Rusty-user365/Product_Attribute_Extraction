@@ -33,7 +33,7 @@ The model was evaluated based on its ability to correctly identify and categoriz
 ### 1. Install Dependencies
 
 ```bash
-pip install spacy fastapi uvicorn pandas
+pip install -r requirements.txt
 
 ```
 
