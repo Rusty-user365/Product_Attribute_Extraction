@@ -18,7 +18,7 @@ except:
     nlp = spacy.blank("en")
 
 app = FastAPI(title="Product Attribute Extractor API (HF Edition)")
-client = InferenceClient(model=MODEL_ID, token=HF_TOKEN)
+client = InferenceClient(model=MODEL_ID)
 
 class DescriptionRequest(BaseModel):
     text: str
