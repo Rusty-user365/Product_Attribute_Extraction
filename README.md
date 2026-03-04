@@ -47,6 +47,10 @@ pip install spacy fastapi uvicorn pandas
 ### 3. Test the Endpoint
 
 Send a **POST** request to `http://127.0.0.1:8000/docs#/`:
+
+```
+http://127.0.0.1:8000/docs#/
+```
 **Body:**
 
 ```json
