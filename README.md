@@ -37,6 +37,19 @@ pip install spacy fastapi uvicorn pandas
 
 ```
 
+```bash
+
+python -m spacy download en_core_web_lg
+
+```
+###  create spacy Model
+
+```bash
+ python processor.py   
+
+```
+
+
 ### 2. Start the API
 
 ```bash
@@ -90,6 +103,7 @@ project-folder/
 ├── config.cfg           # spaCy training config
 ├── prepare_data.py      # processing script
 ├── main.py              # FastAPI script
+├── processor.py         # makes  your spacy  model 
 ├── output/              # Folder containing 'model-best'
 └── README.md            # Documentation
 
