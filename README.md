@@ -42,22 +42,28 @@ pip install spacy fastapi uvicorn pandas
 python -m spacy download en_core_web_lg
 
 ```
-###  create spacy Model
+### 2. create spacy Model
 
 ```bash
  python processor.py   
 
 ```
 
+### 3. Set HuggingFace Token(IN Global Env, Poweshell)
 
-### 2. Start the API
+```bash
+ setx HF_TOKEN "hf_your_token_here"
+```
+
+
+### 4. Start the API
 
 ```bash
  python main.py   
 
 ```
 
-### 3. Test the Endpoint
+### 5. Test the Endpoint
 
 Send a **POST** request to `http://127.0.0.1:8000/docs#/`:
 
@@ -102,7 +108,7 @@ project-folder/
 ├── train.spacy          # Binary data for spaCy
 ├── config.cfg           # spaCy training config
 ├── prepare_data.py      # processing script
-├── main.py              # FastAPI script
+├── main.py              # FastAPI script + LLM Refiner
 ├── processor.py         # makes  your spacy  model 
 ├── output/              # Folder containing 'model-best'
 └── README.md            # Documentation
