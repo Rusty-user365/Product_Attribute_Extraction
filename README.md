@@ -40,7 +40,7 @@ pip install spacy fastapi uvicorn pandas
 ### 2. Start the API
 
 ```bash
- uvicorn app:main --reload --host 0.0.0.0 --port 8000     
+ python main.py   
 
 ```
 
@@ -81,13 +81,13 @@ Send a **POST** request to `http://127.0.0.1:8000/docs#/`:
 ```text
 project-folder/
 │
-├── Dataset.json         # Your labeled raw data
+├── Dataset.json         # labeled raw data
 ├── train.spacy          # Binary data for spaCy
 ├── config.cfg           # spaCy training config
-├── prepare_data.py      # Your processing script
+├── prepare_data.py      # processing script
 ├── main.py              # FastAPI script
 ├── output/              # Folder containing 'model-best'
-└── README.md            # Your documentation
+└── README.md            # Documentation
 
 ```
 
